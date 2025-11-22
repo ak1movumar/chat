@@ -33,7 +33,7 @@ export default function Chat() {
           event: "INSERT",
           schema: "public",
           table: "chat-fs",
-          filter: `room_id=eq.${room}`, // ✅ Правильный синтаксис
+          filter: `room_id=eq.${room}`,
         },
         (payload) => {
           console.log("Получено сообщение:", payload.new);

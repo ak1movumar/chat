@@ -1,19 +1,23 @@
-"use client"
+"use client";
 import scss from "./chatWindow.module.scss";
-import { useParams } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import { CiVideoOn } from "react-icons/ci";
 import { useState } from "react";
 
 export default function ChatWindow() {
   const { id } = useParams();
+  const router = useRouter();
   const [value, setValue] = useState("");
 
   return (
     <div className={scss.wrapper}>
       <header className={scss.header}>
-
         <h2>Chat #{id}</h2>
-        <CiVideoOn size={28} />
+        <CiVideoOn
+          size={28}
+          onClick={() => router.push("/call")}
+          style={{ cursor: "pointer" }}
+        />
       </header>
 
       <div className={scss.messages}>
@@ -22,11 +26,11 @@ export default function ChatWindow() {
       </div>
 
       <div className={scss.inputBox}>
-        <input 
-          type="text" 
+        <input
+          type="text"
           placeholder="Message..."
           value={value}
-          onChange={e => setValue(e.target.value)}
+          onChange={(e) => setValue(e.target.value)}
         />
         <button>Send</button>
       </div>
