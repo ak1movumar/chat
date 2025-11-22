@@ -1,0 +1,91 @@
+.main {
+  position: relative;
+  width: 25%;
+  background: rgb(35, 36, 48);
+  .mainContainer {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 10px;
+
+    h1 {
+      color: white;
+      padding: 20px 0;
+    }
+    .chat {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 10px;
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
+
+      .link {
+        color: white;
+      }
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      padding-top: 10px;
+      input {
+        border-radius: 15px;
+        background: rgb(74, 76, 89);
+        border: none;
+        outline: none;
+        padding: 7px;
+        color: white;
+      }
+      span {
+        color: white;
+      }
+    }
+  }
+  .modal {
+    position: absolute;
+    top: 0;
+    left: 30px;
+    width: 260px;
+    height: 100vh;
+    background: rgb(35, 36, 48);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+    img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+    .setting {
+      display: flex;
+      gap: 10px;
+      span {
+        color: white;
+      }
+      h3 {
+        color: white;
+      }
+    }
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
