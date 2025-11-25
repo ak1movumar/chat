@@ -1,3 +1,18 @@
 .main {
   display: flex;
+  height: 100vh;
+}
+
+.emptyState {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0E1621;
+  color: #FFFFE9;
+  
+  h2 {
+    color: #999;
+    font-weight: 300;
+  }
 }
